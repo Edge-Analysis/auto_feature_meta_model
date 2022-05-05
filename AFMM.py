@@ -385,8 +385,6 @@ class AFMM:
             outputs=output_layers)
         
         batches = [32,64,128,256,512,1024,2048]
-        #batches = [1024,2048]
-        
         weight = 1
         decline = (1 - params['feature_wgts'])/(batches.index(params['batch_size'])+1)
         for batch in batches:
@@ -525,7 +523,8 @@ class AFMM:
             'samples':100,
             #'trial':True,
             'mlflow': False,
-            'spark_trials': False
+            'spark_trials': False,
+            'path':''
         }
         
         for param in hyperparams.keys():
