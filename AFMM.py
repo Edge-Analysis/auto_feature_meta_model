@@ -501,7 +501,7 @@ class AFMM:
                         model.save('/tmp/AFMM.h5')
                         self.params['models']['TF_model'] = model
                         self.params['models']['TF_model'] = model
-                        self.params['data']['test']['TF'] = params['testset']
+                        #self.params['data']['test']['TF'] = params['testset']
             return loss, variance
         
     def TF_trials(self):
